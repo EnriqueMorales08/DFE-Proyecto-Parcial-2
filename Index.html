@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <div>
+        <button id="agregar-tarea">Nueva Tarea</button>
+    </div>
+    <div id="contenedor-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Descripción</th>
+                    <th>Completado</th>
+                    <th>Prioridad</th>
+                    <th>Fecha de Vencimiento</th>
+                    <th>Tipo de Tarea</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="lista-tareas">
+                <!-- Aquí se agregarán las tareas desde la API -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Formulario para agregar una nueva tarea -->
+    <div id="contenedor-formulario">
+        <form id="formulario-tarea" class="oculto">
+            <h2>Agregar Nueva Tarea</h2>
+            <label for="nuevo-titulo-tarea">Título:</label>
+            <input type="text" id="nuevo-titulo-tarea" required>
+
+            <label for="nueva-descripcion-tarea">Descripción:</label>
+            <textarea id="nueva-descripcion-tarea" required></textarea>
+
+            <label for="nueva-completado-tarea">Completado:</label>
+            <input type="checkbox" id="nueva-completado-tarea">
+
+            <label for="nueva-prioridad-tarea">Prioridad:</label>
+            <select id="nueva-prioridad-tarea">
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baja">Baja</option>
+            </select>
+
+            <label for="nueva-fecha-vencimiento-tarea">Fecha de Vencimiento:</label>
+            <input type="date" id="nueva-fecha-vencimiento-tarea" required>
+
+            <label for="nueva-tipo-tarea">Tipo de Tarea:</label>
+            <select id="nueva-tipo-tarea">
+                <option value="Personal">Personal</option>
+                <option value="Laboral">Laboral</option>
+                <option value="Educativa">Educativa</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <button type="submit">Agregar Tarea</button>
+            <button type="button" id="cancelar-tarea">Cancelar Tarea</button>
+        </form>
+    </div>
+    <div id="contenedor-formulario-actualizar">
+        <form id="formulario-actualizar" class="oculto">
+            <h2>Editar Tarea</h2>
+            <label for="nuevo-titulo-actualizar">Título:</label>
+            <input type="text" id="nuevo-titulo-actualizar" required>
+
+            <label for="nueva-descripcion-actualizar">Descripción:</label>
+            <textarea id="nueva-descripcion-actualizar" required></textarea>
+
+            <label for="nueva-completado-actualizar">Completado:</label>
+            <input type="checkbox" id="nueva-completado-actualizar">
+
+            <label for="nueva-prioridad-actualizar">Prioridad:</label>
+            <select id="nueva-prioridad-actualizar">
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baja">Baja</option>
+            </select>
+
+            <label for="nueva-fecha-vencimiento-actualizar">Fecha de Vencimiento:</label>
+            <input type="date" id="nueva-fecha-vencimiento-actualizar" required>
+
+            <label for="nueva-tipo-tarea-actualizar">Tipo de Tarea:</label>
+            <select id="nueva-tipo-tarea-actualizar">
+                <option value="Personal">Personal</option>
+                <option value="Laboral">Laboral</option>
+                <option value="Educativa">Educativa</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <input type="hidden" id="tarea-id-actualizar">
+            <button type="button" id="cancelar-actualizar">Cancelar</button>
+            <button type="submit" id="actualizar-tarea">Actualizar Tarea</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

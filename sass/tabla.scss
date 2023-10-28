@@ -1,0 +1,27 @@
+#contenedor-table{
+    display: flex;
+    justify-content: center;   
+    width: 100%;
+    margin: 20px;
+
+    table {
+        border-collapse: collapse;
+        width: 95%;
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+    
+        
+    th {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+        background-color: $table-header-background-color;
+        color: $table-header-text-color;
+    }
+    }
+  
+  }
+
